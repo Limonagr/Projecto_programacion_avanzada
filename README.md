@@ -64,15 +64,102 @@ Siga los siguientes pasos para instalar y configurar el proyecto en su máquina 
     [comando para instalar dependencias, por ejemplo, npm install]
     ```
 
+
+---
+
 ## Uso
 
-Proporcione instrucciones claras y ejemplos sobre cómo utilizar su proyecto.
+A continuación, se describen los pasos y ejemplos para utilizar el sistema de gestión de cupos con reconocimiento facial. El proyecto incluye varias funcionalidades que se pueden acceder mediante la interfaz gráfica de usuario (GUI).
 
-1. Ejecute el proyecto:
-    ```bash
-    [comando para ejecutar el proyecto, por ejemplo, npm start]
-    ```
-2. Abra su navegador y navegue a `http://localhost:3000` para ver la aplicación en funcionamiento.
+
+#### 1. **Iniciar la aplicación**
+
+1. Asegúrate de que los pasos de instalación están completos y los directorios necesarios (`data/`, `data/embeddings/`) están creados.
+2. Ejecuta el archivo principal desde la terminal:
+   ```bash
+   python interfaz.py
+   ```
+
+#### 2. **Registrar un Estudiante**
+
+Este proceso permite agregar un nuevo estudiante al sistema:
+
+1. En la interfaz principal, haz clic en el botón **"Registrar Estudiante"**.
+2. Se abrirá una nueva ventana que solicitará:  
+   - **Nombre** del estudiante.  
+   - **ID del Estudiante** (debe ser un número único).  
+3. Una vez ingresados los datos, la aplicación activará la cámara:
+   - Asegúrate de que el rostro del estudiante esté claramente visible en el cuadro.  
+   - Presiona la tecla **`c`** para capturar la foto.
+4. El sistema generará un embedding facial a partir de la foto y guardará el registro del estudiante en la base de datos.
+5. Recibirás un mensaje de confirmación indicando que el estudiante fue registrado exitosamente.
+
+
+#### 3. **Apartar un Cupo**
+
+El proceso para reservar un cupo es el siguiente:
+
+1. En la interfaz principal, haz clic en el botón **"Apartar Cupo"**.
+2. Aparecerá un mensaje solicitando al estudiante que mire a la cámara.
+3. La cámara se activará y realizará el reconocimiento facial en tiempo real:
+   - Si el estudiante es reconocido, su información se recuperará de la base de datos.
+   - El sistema verificará si el estudiante ya tiene un cupo reservado.
+4. Si todo es válido, el sistema registrará la reserva en la base de datos y mostrará un mensaje de éxito.
+
+**Nota**: Si el estudiante no es reconocido o ya tiene un cupo reservado, aparecerá un mensaje de error indicando el motivo.
+
+
+#### 4. **Reclamar un Cupo**
+
+El proceso para reclamar un cupo reservado es similar al anterior:
+
+1. En la interfaz principal, haz clic en el botón **"Reclamar Cupo"**.
+2. Aparecerá un mensaje solicitando al estudiante que mire a la cámara.
+3. La cámara realizará el reconocimiento facial:
+   - Si el estudiante es reconocido, su información se verificará en la base de datos para comprobar si tiene un cupo reservado.
+   - Si tiene un cupo reservado, este será marcado como reclamado en el sistema.
+4. El sistema mostrará un mensaje de éxito si el reclamo se realiza correctamente.
+
+
+#### 5. **Ver Registros**
+
+Esta funcionalidad permite visualizar la información almacenada en las tablas de la base de datos.
+
+1. En la interfaz principal, haz clic en el botón **"Ver Registros"**.
+2. Se abrirá una ventana para seleccionar la tabla que deseas visualizar:
+   - **Registrados**: Muestra los estudiantes registrados en el sistema.
+   - **Apartados**: Muestra los cupos reservados por los estudiantes.
+   - **Reclamados**: Muestra los cupos que han sido reclamados.
+3. Selecciona la tabla deseada, y una nueva ventana mostrará los registros en un formato tabular.
+
+---
+
+### Ejemplo de Flujo Completo
+
+1. **Registrar un estudiante**:
+   - Ingresa el nombre: `Juan Pérez`.
+   - Ingresa el ID: `101`.
+   - Captura la foto para generar el embedding.
+
+2. **Apartar un cupo**:
+   - Juan Pérez abre la aplicación y selecciona "Apartar Cupo".
+   - Mira a la cámara y el sistema reconoce su rostro.
+   - El sistema registra su reserva y muestra el mensaje: _"Cupo apartado exitosamente para Juan Pérez."_.
+
+3. **Reclamar un cupo**:
+   - Más tarde, Juan Pérez selecciona "Reclamar Cupo".
+   - Mira a la cámara, es reconocido y el sistema valida que tiene un cupo reservado.
+   - El sistema registra el reclamo y muestra el mensaje: _"Cupo reclamado exitosamente para Juan Pérez."_.
+
+---
+
+### Teclas y Acciones Importantes
+
+- **`q`**: Finaliza el reconocimiento facial en cualquier momento.
+- **`c`**: Captura una foto durante el registro de estudiantes.
+
+---
+
 
 ### Ejemplos
 
@@ -90,4 +177,8 @@ Proporcione instrucciones claras y ejemplos sobre cómo utilizar su proyecto.
 │   ├── fotos/             # Carpeta opcional para guardar fotos capturadas.
 │
 ├── requirements.txt       # Archivo con las dependencias del proyecto.
-└── README.md              # Documentación del proyecto.
+└── README.md              # Documentación del proyecto. 
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Esto significa que puedes usar, modificar y distribuir el código con libertad, siempre y cuando se incluya la información de la licencia original.
