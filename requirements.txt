@@ -1,2 +1,5 @@
-opencv-python==4.8.0.76
-numpy==1.24
+numpy==1.23.5          # Para manejar arrays y cálculos matemáticos (embeddings)
+opencv-python==4.8.0.74 # Para capturar video y procesar imágenes
+face-recognition==1.3.0 # Para reconocimiento facial y generación de embeddings
+tkinter                # Incluido por defecto en Python, no necesita instalación
+sqlite3                # Biblioteca estándar, incluida en Python
