@@ -310,3 +310,6 @@ class Interfaz:
         """Inicia la aplicación."""
         self.root.mainloop()
 
+app = Interfaz()
+app.iniciar()
+
