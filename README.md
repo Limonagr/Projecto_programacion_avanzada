@@ -73,28 +73,28 @@ Antes de instalar y ejecutar el proyecto, asegúrate de cumplir con los siguient
 
 ### Pasos de Instalación
    Sigue estas instrucciones para configurar el proyecto en tu máquina local:
-1. Clonar el Repositorio (Opcional)
+### 1. Clonar el Repositorio (Opcional)
 
 Si el proyecto está en GitHub, clónalo con el siguiente comando:
 
 git clone <URL_DEL_REPOSITORIO>
 
 Si no está en GitHub, asegúrate de descargar los archivos del proyecto en una carpeta local.
-2. Crear un Entorno Virtual
+### 2. Crear un Entorno Virtual
 
 Es una buena práctica trabajar en un entorno virtual para evitar conflictos de dependencias. Para crear uno, usa los siguientes comandos:
 
-# Crear el entorno virtual (llámalo venv o como prefieras)
+#### Crear el entorno virtual (llámalo venv o como prefieras)
 python -m venv venv
 
-# Activar el entorno virtual:
-# En Windows
+#### Activar el entorno virtual:
+#### En Windows
 venv\Scripts\activate
 
-# En macOS/Linux
+#### En macOS/Linux
 source venv/bin/activate
 
-3. Instalar Dependencias
+### 3. Instalar Dependencias
 
 Asegúrate de estar en la carpeta raíz del proyecto (donde está ubicado requirements.txt) y ejecuta:
 
@@ -108,7 +108,7 @@ Esto instalará todas las bibliotecas necesarias, incluyendo:
     Pillow
     mediapipe
 
-4. Crear Directorios Necesarios
+### 4. Crear Directorios Necesarios
 
 El proyecto requiere algunos directorios para almacenar los datos. Si no están creados automáticamente, créalos manualmente:
 
@@ -116,12 +116,12 @@ mkdir data
 mkdir data/embeddings
 mkdir data/fotos
 
-5. Inicializar la Base de Datos
+### 5. Inicializar la Base de Datos
 
 El archivo base_datos.py inicializa la base de datos automáticamente al ejecutarse por primera vez. No necesitas configurar nada manualmente. Solo asegúrate de que el archivo student_log.db se crea en el mismo directorio del proyecto al iniciar.
 
 Si deseas limpiar o reiniciar la base de datos en el futuro, puedes eliminar el archivo student_log.db y ejecutar nuevamente el sistema.
-6. Probar la Instalación
+### 6. Probar la Instalación
 
 Para verificar que todo esté funcionando correctamente:
 
@@ -134,7 +134,7 @@ Para verificar que todo esté funcionando correctamente:
         Verifica que la cámara funcione durante la captura de imágenes.
         Intenta apartar un cupo para validar el reconocimiento facial.
 
-Solución de Problemas Comunes
+#### Solución de Problemas Comunes
 
     Error al importar bibliotecas (ModuleNotFoundError):
         Asegúrate de que instalaste las dependencias usando pip install -r requirements.txt.
