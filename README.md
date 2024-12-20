@@ -72,7 +72,7 @@ A continuación, se describen los pasos y ejemplos para utilizar el sistema de g
 Este proceso permite agregar un nuevo estudiante al sistema:
 
 1. En la interfaz principal, haz clic en el botón **"Registrar Estudiante"**.
-   ![imagen](https://github.com/user-attachments/assets/794b34b7-2ecc-4a05-9010-974626a46d14)
+   - ![imagen](https://github.com/user-attachments/assets/794b34b7-2ecc-4a05-9010-974626a46d14)
 
 3. Se abrirá una nueva ventana que solicitará:  
    - **Nombre** del estudiante.  
@@ -91,10 +91,10 @@ Este proceso permite agregar un nuevo estudiante al sistema:
 El proceso para reservar un cupo es el siguiente:
 
 1. En la interfaz principal, haz clic en el botón **"Apartar Cupo"**.
-   ![imagen](https://github.com/user-attachments/assets/19a1be54-cd32-4ec8-b964-b6b58ff9abfe)
+   - ![imagen](https://github.com/user-attachments/assets/19a1be54-cd32-4ec8-b964-b6b58ff9abfe)
 
 2. Aparecerá un mensaje solicitando al estudiante que mire a la cámara.
-   ![imagen](https://github.com/user-attachments/assets/ce8c3b7a-f0cf-4d47-baca-191e815195f5)
+   - ![imagen](https://github.com/user-attachments/assets/ce8c3b7a-f0cf-4d47-baca-191e815195f5)
 
 3. La cámara se activará y realizará el reconocimiento facial en tiempo real:
    - Si el estudiante es reconocido, su información se recuperará de la base de datos.
@@ -109,15 +109,15 @@ El proceso para reservar un cupo es el siguiente:
 El proceso para reclamar un cupo reservado es similar al anterior:
 
 1. En la interfaz principal, haz clic en el botón **"Reclamar Cupo"**.
-   ![imagen](https://github.com/user-attachments/assets/292e92b9-630d-43b4-861b-7366d608a70b)
+   - ![imagen](https://github.com/user-attachments/assets/292e92b9-630d-43b4-861b-7366d608a70b)
 
 2. Aparecerá un mensaje solicitando al estudiante que mire a la cámara.
-   ![imagen](https://github.com/user-attachments/assets/241d0e90-c6e0-4f5c-98bc-154c51217eb8)
+   - ![imagen](https://github.com/user-attachments/assets/241d0e90-c6e0-4f5c-98bc-154c51217eb8)
 
 3. La cámara realizará el reconocimiento facial:
    - Si el estudiante es reconocido, su información se verificará en la base de datos para comprobar si tiene un cupo reservado.
    - Si tiene un cupo reservado, este será marcado como reclamado en el sistema.
-     ![imagen](https://github.com/user-attachments/assets/25190127-7432-4ff1-81d3-5c299ef70913)
+     - ![imagen](https://github.com/user-attachments/assets/25190127-7432-4ff1-81d3-5c299ef70913)
 
 4. El sistema mostrará un mensaje de éxito si el reclamo se realiza correctamente.
 
@@ -127,13 +127,13 @@ El proceso para reclamar un cupo reservado es similar al anterior:
 Esta funcionalidad permite visualizar la información almacenada en las tablas de la base de datos.
 
 1. En la interfaz principal, haz clic en el botón **"Ver Registros"**.
-   ![imagen](https://github.com/user-attachments/assets/2b3d1bb8-396b-49f4-8c6e-7779b36960e2)
+  - ![imagen](https://github.com/user-attachments/assets/2b3d1bb8-396b-49f4-8c6e-7779b36960e2)
 
 2. Se abrirá una ventana para seleccionar la tabla que deseas visualizar:
    - **Registrados**: Muestra los estudiantes registrados en el sistema.
    - **Apartados**: Muestra los cupos reservados por los estudiantes.
    - **Reclamados**: Muestra los cupos que han sido reclamados.
-     ![imagen](https://github.com/user-attachments/assets/c1db35df-1e90-40e2-82a3-cb1d88d91422)
+   - ![imagen](https://github.com/user-attachments/assets/c1db35df-1e90-40e2-82a3-cb1d88d91422)
 
 3. Selecciona la tabla deseada, y una nueva ventana mostrará los registros en un formato tabular.
 
