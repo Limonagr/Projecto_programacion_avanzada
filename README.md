@@ -46,23 +46,10 @@ Siga los siguientes pasos para instalar y configurar el proyecto en su máquina 
 
 ### Prerrequisitos
 
-- Asegúrese de tener [lenguaje de programación o tecnología requerida] instalado.
-- [Lista de otros prerrequisitos si es necesario]
 
 ### Pasos de Instalación
 
-1. Clone el repositorio:
-    ```bash
-    git clone https://github.com/Limonagr/Projecto_programacion_avanzada.git
-    ```
-2. Navegue al directorio del proyecto:
-    ```bash
-    cd Projecto_programacion_avanzada
-    ```
-3. Instale las dependencias:
-    ```bash
-    [comando para instalar dependencias, por ejemplo, npm install]
-    ```
+
 
 
 ---
