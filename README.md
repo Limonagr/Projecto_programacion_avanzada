@@ -45,10 +45,118 @@ La aplicación incluye características como:
 Siga los siguientes pasos para instalar y configurar el proyecto en su máquina local.
 
 ### Prerrequisitos
+Antes de instalar y ejecutar el proyecto, asegúrate de cumplir con los siguientes requerimientos:
 
+    Sistema Operativo:
+       - Windows 10/11, Linux o macOS.
+
+    Python:
+       - Python 3.8 o superior instalado en tu máquina.
+       - Puedes descargar Python desde su página oficial.
+
+    Bibliotecas necesarias:
+        Las siguientes bibliotecas de Python son requeridas para este proyecto:
+           - opencv-python
+           - face-recognition
+           - numpy
+           - tkinter (incluido por defecto en la mayoría de las distribuciones de Python).
+        Estas dependencias están listadas en el archivo requirements.txt.
+
+    Cámara:
+       - Una cámara funcional conectada al equipo para capturar imágenes en tiempo real (puede ser la cámara integrada de una laptop o una cámara USB externa).
+
+    Editor de Texto o IDE:
+       - Se recomienda un editor como Visual Studio Code, PyCharm, o Jupyter Notebook para trabajar con el código.
+
+    Git (Opcional):
+       - Si deseas clonar el repositorio del proyecto desde GitHub, necesitarás tener Git instalado. Descárgalo desde su página oficial.
 
 ### Pasos de Instalación
+   Sigue estas instrucciones para configurar el proyecto en tu máquina local:
+1. Clonar el Repositorio (Opcional)
 
+Si el proyecto está en GitHub, clónalo con el siguiente comando:
+
+git clone <URL_DEL_REPOSITORIO>
+
+Si no está en GitHub, asegúrate de descargar los archivos del proyecto en una carpeta local.
+2. Crear un Entorno Virtual
+
+Es una buena práctica trabajar en un entorno virtual para evitar conflictos de dependencias. Para crear uno, usa los siguientes comandos:
+
+# Crear el entorno virtual (llámalo venv o como prefieras)
+python -m venv venv
+
+# Activar el entorno virtual:
+# En Windows
+venv\Scripts\activate
+
+# En macOS/Linux
+source venv/bin/activate
+
+3. Instalar Dependencias
+
+Asegúrate de estar en la carpeta raíz del proyecto (donde está ubicado requirements.txt) y ejecuta:
+
+pip install -r requirements.txt
+
+Esto instalará todas las bibliotecas necesarias, incluyendo:
+
+    opencv-python
+    face-recognition
+    numpy
+    Pillow
+    mediapipe
+
+4. Crear Directorios Necesarios
+
+El proyecto requiere algunos directorios para almacenar los datos. Si no están creados automáticamente, créalos manualmente:
+
+mkdir data
+mkdir data/embeddings
+mkdir data/fotos
+
+5. Inicializar la Base de Datos
+
+El archivo base_datos.py inicializa la base de datos automáticamente al ejecutarse por primera vez. No necesitas configurar nada manualmente. Solo asegúrate de que el archivo student_log.db se crea en el mismo directorio del proyecto al iniciar.
+
+Si deseas limpiar o reiniciar la base de datos en el futuro, puedes eliminar el archivo student_log.db y ejecutar nuevamente el sistema.
+6. Probar la Instalación
+
+Para verificar que todo esté funcionando correctamente:
+
+    Abre la terminal y ejecuta la interfaz principal del proyecto:
+
+    python interfaz.py
+
+    Se abrirá una ventana gráfica. Comprueba que los botones funcionen:
+        Prueba el registro de estudiantes.
+        Verifica que la cámara funcione durante la captura de imágenes.
+        Intenta apartar un cupo para validar el reconocimiento facial.
+
+Solución de Problemas Comunes
+
+    Error al importar bibliotecas (ModuleNotFoundError):
+        Asegúrate de que instalaste las dependencias usando pip install -r requirements.txt.
+        Si el error persiste, intenta instalar la biblioteca manualmente, por ejemplo:
+
+    pip install opencv-python face-recognition numpy Pillow mediapipe
+
+Problemas con la cámara:
+
+    Verifica que la cámara esté conectada y funcional en otras aplicaciones (como la aplicación de la cámara en tu sistema operativo).
+    Si usas varias cámaras, asegúrate de que cv2.VideoCapture(0) esté configurado correctamente en el archivo reconocimiento.py.
+
+Error de permisos en macOS/Linux:
+
+    Si encuentras problemas de permisos, ejecuta el script con privilegios elevados:
+
+    sudo python interfaz.py
+
+Errores en reconocimiento facial:
+
+    Si los rostros no se reconocen correctamente, verifica que los embeddings están correctamente generados en la carpeta data/embeddings.
+    Asegúrate de que las imágenes sean claras y no estén borrosas al registrar un estudiante.
 
 
 
