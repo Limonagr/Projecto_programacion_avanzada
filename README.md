@@ -274,10 +274,6 @@ Esta funcionalidad permite visualizar la información almacenada en las tablas d
 ---
 
 
-### Ejemplos
-
-- [Incluya ejemplos de uso, capturas de pantalla o GIFs si es necesario]
-
 ## Estructura del Proyecto
 
 <nombre_del_proyecto>/
